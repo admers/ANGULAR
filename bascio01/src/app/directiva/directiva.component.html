@@ -1,0 +1,54 @@
+<!--
+<div *ngIf="cargando == false">
+-->
+<div *ngIf="!cargando">
+  <p>Hola termino de cargar</p>
+</div>
+
+<!--
+<img *ngIf="cargando == true" src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif" alt="">
+-->
+<p>----------------*ngIf----------------------</p>
+<img *ngIf="cargando" src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif" alt="">
+
+<button (click)="Mcargando()">Mostrar cargando</button>
+<button (click)="alternar()">Alternar</button>
+
+<p>----------------*ngFor----------------------</p>
+<!-- *ngFor-->
+<div *ngFor="let nombres of nombre">
+  <p>Hola mi nombre es: {{nombres}} </p>
+</div>
+
+<!-- *ngFor-->
+
+<p>----------------*ngFor----------------------</p>
+<div *ngFor="let prodcuto of productos" class="productos">
+  <p [ngClass]="{ 'textoImportant': prodcuto.esImportante , 'textFsize': 1+1 == 2}" >EL producto es : {{prodcuto.nombre}}</p>
+  <p>TOTAL DE STOCK : {{prodcuto.stock}} </p>
+  <p>Fabricante: {{prodcuto.fabricante}} </p>
+  <p>FV: {{prodcuto.fVence}} </p>
+  <p [class.textoImportant]="prodcuto.esImportante">FV: {{prodcuto.esImportante}} </p>
+
+</div>
+<p>----------------*ngSwitch----------------------</p>
+
+<div CLASS="tab" [ngSwitch]="pestana">
+  <button (click)="cambiarPestana('perfil')">Perfil</button>
+  <button (click)="cambiarPestana('puntos')">Puntos</button>
+  <button (click)="cambiarPestana('info')">Informacion</button>
+
+  <div  class="tabContenido">
+    <p *ngSwitchCase="'perfil'">El perfil</p>
+    <p *ngSwitchCase="'puntos'">Los puntos</p>
+    <p *ngSwitchCase="'info'">Informacion</p>
+    <p *ngSwitchDefault>Seleccione una pestana</p>
+  </div>
+
+</div>
+<p>----------------*ngClass----------------------</p>
+<button (click)="alternarFondo()">Alternar</button>
+
+<div [ngClass]="{ 'cuadrado': mostrarCuadrado}" >
+  <p>ESte deberia aparecer de fondo verde</p>
+</div>

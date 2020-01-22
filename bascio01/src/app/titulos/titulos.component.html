@@ -1,0 +1,20 @@
+<p>TITULOS DE TRABAJO</p>
+{{nombre}} {{apellido}}
+{{alumno.nombre}}
+<img [src]="image" alt="">
+<input type="text" [(ngModel)]="inputNuevo">
+<p>{{inputNuevo}}</p>
+<label for="">Correo
+<input type="text" (ngModelChange)="escriberCorreo()" [(ngModel)]="correo" >
+</label>
+<label for="">Contraseña
+<input type="password" (ngModelChange)="escribeModelo()" [(ngModel)]="password" >
+</label>
+
+<button (click)="ingresar()">Iniciar</button>
+<button (dblclick)="llamarAlert()"  >Doble click</button>
+<br>
+
+
+<input type="text" (input)="escrbirInput($event)">
+<input type="text" (input)="escrbirInput2($event.target.value)">
