@@ -1,0 +1,30 @@
+<div class="container">
+  <form action=""  [formGroup]="formularioArticulo">
+    <div class="form-group">
+      <label for="title">Nombre</label>
+      <input type="text" class="form-control" formControlName="title">
+      <!--<div *ngIf="formularioCreado.controls['nombre'].invalid && formularioCreado.controls['nombre'].dirty" class="alert alert-danger" role="alert">
+        <span *ngIf="formularioCreado.controls['nombre'].errors.required"></span> El nombre es requerido
+      </div>-->
+    </div>
+    <div class="form-group">
+      <label for="body">Descripcion</label>
+      <input type="text" class="form-control" formControlName="body">
+      <!--<div *ngIf="formularioCreado.controls['nombre'].invalid && formularioCreado.controls['nombre'].dirty" class="alert alert-danger" role="alert">
+        <span *ngIf="formularioCreado.controls['nombre'].errors.required"></span> El nombre es requerido
+      </div>-->
+    </div>
+    <div class="form-group">
+      <label for="body">Selecione un Autor</label>
+      <select name="" id="" class="form-control" formControlName="userId">
+        <option *ngFor="let usuario of usuarios" [value]="usuario.id">{{usuario.name}}</option>
+      </select>
+
+      <!--<div *ngIf="formularioCreado.controls['nombre'].invalid && formularioCreado.controls['nombre'].dirty" class="alert alert-danger" role="alert">
+        <span *ngIf="formularioCreado.controls['nombre'].errors.required"></span> El nombre es requerido
+      </div>-->
+    </div>
+
+    <button class="btn btn-primary" [disabled]="!formularioArticulo.valid" (click)="agregar()">Agregar</button>
+  </form>
+</div>

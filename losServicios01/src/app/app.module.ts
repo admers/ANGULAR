@@ -10,6 +10,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {ArticulosService} from './servicios/articulos.service';
 import {UsuarioService} from './servicios/usuario.service';
 import { ArticuloDetalleComponent } from './articulo-detalle/articulo-detalle.component';
+import { AgregarArticuloComponent } from './agregar-articulo/agregar-articulo.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { ArticuloDetalleComponent } from './articulo-detalle/articulo-detalle.co
     PerfilComponent,
     HomeComponent,
     EncabezadoComponent,
-    ArticuloDetalleComponent
+    ArticuloDetalleComponent,
+    AgregarArticuloComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     ArticulosService,

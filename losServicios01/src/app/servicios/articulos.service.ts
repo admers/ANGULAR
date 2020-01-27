@@ -23,5 +23,15 @@ export class ArticulosService {
     return this.http.get<Users>(this.ruta + '/users/' + userioId);
 
   }
+  // ------- Crear  funcion de leer usuarios todos
+
+  leeTodosLosUsuarion(): Observable<Users[]>{
+    return  this.http.get<Users[]>(this.ruta + '/users/');
+  }
+
+
+  guardarArticulo(articulo: Articulo): Observable<Articulo>{
+   return  this.http.post<Articulo>(this.ruta + '/posts', articulo);
+  }
 
 }
