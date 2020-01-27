@@ -9,13 +9,15 @@ import { EncabezadoComponent } from './encabezado/encabezado.component';
 import {HttpClientModule} from '@angular/common/http';
 import {ArticulosService} from './servicios/articulos.service';
 import {UsuarioService} from './servicios/usuario.service';
+import { ArticuloDetalleComponent } from './articulo-detalle/articulo-detalle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PerfilComponent,
     HomeComponent,
-    EncabezadoComponent
+    EncabezadoComponent,
+    ArticuloDetalleComponent
   ],
   imports: [
     BrowserModule,

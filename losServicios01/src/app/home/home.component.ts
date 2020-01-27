@@ -22,4 +22,9 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  irAlDetalle(articulo: Articulo){
+    this.ArticuloInyectado.articulo = articulo;
+    this.Ruta.navigateByUrl('/articulo-detalle');
+  }
+
 }
